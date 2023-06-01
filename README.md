@@ -20,7 +20,7 @@ You can install PreState via npm :
 
    or 
 
-`<script src="https://unpkg.com/prestate@1.0.3/index.js"></script>`
+`<script src="https://unpkg.com/prestate@1.0.4/index.js"></script>`
 
 #Basic usage
 
