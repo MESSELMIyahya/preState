@@ -2,7 +2,7 @@
 
 PreState is a lightweight JavaScript library that empowers you to efficiently manage and control state in your web applications. With PreState, you can easily handle data and enable reactive behavior, resulting in more organized and dynamic projects.
 
-## Key Features
+## Features
 
 - **Simplified State Management**: PreState simplifies state management by providing a streamlined API for creating and updating state variables. With its intuitive syntax, you can focus on your application's logic instead of worrying about the intricacies of state management.
 
