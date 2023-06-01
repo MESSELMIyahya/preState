@@ -57,43 +57,43 @@ as we can see here the `State` class which has `use()` method that returns array
 ##### getColor 
 its is function that returns the current value of the state 
 ```js
-	 console.log(getColor());
-	 // => red
+console.log(getColor());
+// => red
 ```
 ##### setColor 
 its is function , which takes a callback as an argument and has tow parameter `current value` and `old value` and  returns  the new value of the state 
 ```js
-	 console.log(getColor());
-	 // => red
-	 setColor((currentValue,oldValue)=> 'green' );
-	 console.log(getColor());
-	 // => green
+console.log(getColor());
+// => red
+setColor((currentValue,oldValue)=> 'green' );
+console.log(getColor());
+// => green
 ```
 ##### onColorUpdates 
 its is function , that takes a callback as an argument and has tow parameter `new value` and  a `function` that reset the value of the state to the old value and returns the old value , the callback function will run whenever the value of the state changes 
 ```js
-	 onColorUpdates((newValue,setOld)=>{
-	 console.log(`my new color is ${newValue} ,now my color is ${setOld()}`);
-	 });
-	 setColor((e)=>'green');
-	 //  =>  my new color is green , now my color is red
-	 console.log(getColor());
-	 // => red
-	 setColor((e)=>'blue');
-	 //  =>  my new color is blue , now my color is red
+onColorUpdates((newValue,setOld)=>{
+console.log(`my new color is ${newValue} ,now my color is ${setOld()}`);
+});
+setColor((e)=>'green');
+//  =>  my new color is green , now my color is red
+console.log(getColor());
+// => red
+setColor((e)=>'blue');
+ //  =>  my new color is blue , now my color is red
 ```
 ### Use method 
 
 `use` it is method in the State class and  we've seen in the previous examples that the `use` method returns an array and we've used three functions from , in `use` methods we can give it tow argument the first is the update function in the second is a object 
 ##### Example 
 ```js
-	const myUpdateFun = (e) =>console.log(`my Money is $${e}`);
-	 cosnt [ getMoney , setMoney ] = new State(100).use(myUpdateFun);
-	 // => my money is $100
+const myUpdateFun = (e) =>console.log(`my Money is $${e}`);
+const [ getMoney , setMoney ] = new State(100).use(myUpdateFun);
+ // => my money is $100
 ```
 as we can see the function that we've passed to the `use` method was called in start without any updates , the difference between the function that we've passed as callback to set the `onUpdateFun` function in the previous examples and the functoin that we've passed to the `use` method  that the functoin in the `use` method will be called in the start , and you can stop it from runing in the start by the second argument in the `use` method 
 ```js
- const [ getPrice , setPrice ] = new State(250).use( onPriceUpdates , { runUOS : false } );
+const [ getPrice , setPrice ] = new State(250).use( onPriceUpdates , { runUOS : false } );
 ```
 as we see that the object a property `runUOS` and it is by default true and when you set it to false the function that we passed as callback to the first argument won't be called in the start 
 
@@ -101,7 +101,7 @@ as we see that the object a property `runUOS` and it is by default true and when
 'useCoust' it is method in the State class and it returns value of the State and it works as constant variable  
 ##### Example 
 ```js
-	 const Salary = new State(2400).useConst();
-	 console.log(`my salary is $${Salary}`);
-	 // => my salary is $2400
+const Salary = new State(2400).useConst();
+console.log(`my salary is $${Salary}`);
+// => my salary is $2400
 ```
