@@ -1,0 +1,20 @@
+{
+  "name": "prestate",
+  "version": "1.0.1",
+  "description": "YState is a lightweight JavaScript library for managing and controlling state in web applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MESSELMIyahya/preState.git"
+  },
+  "keywords": [
+    "PreState",
+    "State Controller"
+  ],
+  "author": "YahyaMesselmi",
+  "license":"MIT"
+  
+}
