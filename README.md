@@ -70,17 +70,17 @@ its is function , which takes a callback as an argument and has tow parameter `c
 
 ##### onColorUpdates 
 its is function , that takes a callback as an argument and has tow parameter `new value` and  a `function` that reset the value of the state to the old value and returns the old value , the callback function will run whenever the value of the state changes 
-
-	 onColorUpdates((newValue,setOld)=>{
-	 console.log(`my new color is ${newValue} ,now my color is ${setOld()}`);
-	 });
-	 setColor((e)=>'green');
-	 //  =>  my new color is green , now my color is red
-	 console.log(getColor());
-	 // => red
-	 setColor((e)=>'blue');
-	 //  =>  my new color is blue , now my color is red
-
+```
+    onColorUpdates((newValue,setOld)=>{
+    console.log(`my new color is ${newValue} ,now my color is ${setOld()}`);
+    });
+    setColor((e)=>'green');
+    //  =>  my new color is green , now my color is red
+    console.log(getColor());
+    // => red
+    setColor((e)=>'blue');
+    //  =>  my new color is blue , now my color is red
+```
 ### Use method 
 
 `use` it is method in the State class and  we've seen in the previous examples that the `use` method returns an array and we've used three functions from , in `use` methods we can give it tow argument the first is the update function in the second is a object 
