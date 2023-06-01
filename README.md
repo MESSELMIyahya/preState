@@ -61,7 +61,7 @@ console.log(getColor());
 // => red
 ```
 ##### setColor 
-its is function , which takes a callback as an argument and has tow parameter `current value` and `old value` and  returns  the new value of the state. 
+its is function , which takes a callback as an argument and has two parameter `current value` and `old value` and  returns  the new value of the state. 
 ```js
 console.log(getColor());
 // => red
@@ -70,7 +70,7 @@ console.log(getColor());
 // => green
 ```
 ##### onColorUpdates 
-its is function , that takes a callback as an argument and has tow parameter `new value` and  a `function` that reset the value of the state to the old value and returns the old value , the callback function will run whenever the value of the state changes. 
+its is function , that takes a callback as an argument and has two parameter `new value` and  a `function` that reset the value of the state to the old value and returns the old value , the callback function will run whenever the value of the state changes. 
 ```js
 onColorUpdates((newValue,setOld)=>{
 console.log(`my new color is ${newValue} ,now my color is ${setOld()}`);
@@ -84,14 +84,14 @@ setColor((e)=>'blue');
 ```
 ### Use method 
 
-`use` it is method in the State class and  we've seen in the previous examples that the `use` method returns an array and we've used three functions from , in `use` methods we can give it tow argument the first is the update function in the second is a object. 
+`use` it is method in the State class and  we've seen in the previous examples that the `use` method returns an array and we've used three functions from , in `use` methods we can give it two argument the first is the update function in the second is a object. 
 ##### Example 
 ```js
 const myUpdateFun = (e) =>console.log(`my Money is $${e}`);
 const [ getMoney , setMoney ] = new State(100).use(myUpdateFun);
  // => my money is $100
 ```
-as we can see the function that we've passed to the `use` method was called in start without any updates , the difference between the function that we've passed as callback to set the `onUpdateFun` function in the previous examples and the function that we've passed to the `use` method  that the function in the `use` method will be called in the start , and you can stop it from runing in the start by the second argument in the `use` method. 
+as we can see the function that we've passed to the `use` method was called in start without any updates , the difference between the function that we've passed as callback to set the `onUpdateFun` function in the previous examples and the function that we've passed to the `use` method  that the function in the `use` method will be called in the start , and you can stop it from running in the start by the second argument in the `use` method. 
 ```js
 const [ getPrice , setPrice ] = new State(250).use( onPriceUpdates , { runUOS : false } );
 ```
@@ -136,7 +136,7 @@ myBut.onclick = ()=> setToggle(e=>!e);
 // <nav id="myNav" style="display:none" >...
 
 ```
-as we can see here that the **middleware** will be called before the `onToggled` function and returns the value that the `onToggled` will take as an argument, The **middleware** recommended to use in the complex logic and you can add as much as your needs from them, the callback that you put in `middleware` method has tow arguments one is the new value the second is the old value 
+as we can see here that the **middleware** will be called before the `onToggled` function and returns the value that the `onToggled` will take as an argument, The **middleware** recommended to use in the complex logic and you can add as much as your needs from them, the callback that you put in `middleware` method has two arguments one is the new value the second is the old value 
 
 ```js 
 const myMiddleware = (newValue,oldValue)=>{
